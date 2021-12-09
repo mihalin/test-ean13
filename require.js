@@ -1906,7 +1906,7 @@ var requirejs, require, define;
             //that do not match the behavior of all other browsers with
             //addEventListener support, which fire the onload event for a
             //script right after the script execution. See:
-            //https://connect.microsoft.com/IE/feedback/details/672057/script-onload-event-is-not-fired-immediately-after-script-execution
+            //https://connect.microsoft.com/IE/feedback/details/648057/script-onload-event-is-not-fired-immediately-after-script-execution
             //UNFORTUNATELY Opera implements attachEvent but does not follow the script
             //script execution mode.
             if (node.attachEvent &&
