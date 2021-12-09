@@ -52,8 +52,8 @@ var BarcodeReader = {
   // Always call the Init().
   Init: function() {
     BarcodeReader.ScanCanvas = BarcodeReader.FixCanvas(document.createElement("canvas"));
-    BarcodeReader.ScanCanvas.width = 640;
-    BarcodeReader.ScanCanvas.height = 480;
+    BarcodeReader.ScanCanvas.width = 1280;
+    BarcodeReader.ScanCanvas.height = 720;
     BarcodeReader.ScanContext = BarcodeReader.ScanCanvas.getContext("2d");
   },
 
@@ -272,15 +272,15 @@ var BarcodeReader = {
     if (orientation === 8 || orientation === 6) {
       if (sceneCaptureType === "Landscape" && image.width > image.height) {
         orientation = 1;
-        BarcodeReader.ScanCanvas.width = 640;
-        BarcodeReader.ScanCanvas.height = 480;
+        BarcodeReader.ScanCanvas.width = 1280;
+        BarcodeReader.ScanCanvas.height = 720;
       } else {
-        BarcodeReader.ScanCanvas.width = 480;
-        BarcodeReader.ScanCanvas.height = 640;
+        BarcodeReader.ScanCanvas.width = 720;
+        BarcodeReader.ScanCanvas.height = 1280;
       }
     } else {
-      BarcodeReader.ScanCanvas.width = 640;
-      BarcodeReader.ScanCanvas.height = 480;
+      BarcodeReader.ScanCanvas.width = 1280;
+      BarcodeReader.ScanCanvas.height = 720;
     }
     BarcodeReader.DecoderWorker.onmessage = BarcodeReader.BarcodeReaderImageCallback;
     BarcodeReader.ScanContext.drawImage(image, 0, 0, BarcodeReader.ScanCanvas.width, BarcodeReader.ScanCanvas.height);

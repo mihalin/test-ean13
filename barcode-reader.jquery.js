@@ -35,7 +35,7 @@
     var localStream;
 
     // set video dimensions
-    video.width = 640;
+    video.width = 1280;
     video.height = 360;
 
     if(!settings.video){
