@@ -71,7 +71,7 @@
     if (navigator.getUserMedia) {
       navigator.getUserMedia({
           video: { facingMode: { exact: "environment" } },
-          audio: true
+          audio: false
         },
         function(localMediaStream) {
           // video.src = window.URL.createObjectURL(localMediaStream);
