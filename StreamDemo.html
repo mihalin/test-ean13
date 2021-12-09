@@ -70,7 +70,7 @@
       navigator.msGetUserMedia);
     if (navigator.getUserMedia) {
       navigator.getUserMedia({
-          video: true,
+          video: { facingMode: { exact: "environment" } },
           audio: true
         },
         function(localMediaStream) {
